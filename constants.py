@@ -10,4 +10,9 @@ RED = (255, 0, 0)
 BLACK = (0, 0, 0)   
 GREEN = (0, 255, 0)
 
+# PADDEL
 PADDEL_SPEED = 7
+
+# BALL
+BALL_SIZE = 20,20
+BALL_SPEED = 5
