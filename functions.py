@@ -13,3 +13,12 @@ def show_score(Surface, _str, color, which):
         position[0] = (WIDTH//2) + 20
 
     Surface.blit(str_obj, position)
+
+
+def update_player(player, keys):
+    if keys[pygame.K_UP] and player.top >= 10:
+        player.y -= PADDEL_SPEED
+    if keys[pygame.K_DOWN] and player.bottom <= HEIGHT - 10:
+        player.y += PADDEL_SPEED
+    return player
+    

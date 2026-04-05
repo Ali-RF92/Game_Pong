@@ -3,7 +3,7 @@ import sys
 from constants import *
 from init import *
 from objects import *
-from functions import show_score
+from functions import show_score, update_player
 
 
 clock = pygame.time.Clock()
@@ -19,11 +19,8 @@ while True:
             sys.exit()
 
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_UP] and player.top >= 10:
-        player.y -= PADDEL_SPEED
-    if keys[pygame.K_DOWN] and player.bottom <= HEIGHT - 10:
-        player.y += PADDEL_SPEED
-
+    player = update_player(player, keys)
+    
     if ball.bottom >= HEIGHT or ball.top <= 0:
         ball_yd *= -1
 
